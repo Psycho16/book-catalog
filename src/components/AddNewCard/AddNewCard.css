@@ -1,0 +1,23 @@
+/* AddNewCard */
+.book-form {
+  margin: 5px 5px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+  height: 250px;
+  border: 1px solid #000000;
+  padding: 5px;
+}
+.book-form-input {
+  font-size: 20px;
+  height: 25px;
+  border: none;
+}
+.book-form-input:focus {
+  outline: none;
+}
+.book-form_button {
+  height: 50px;
+  font-size: 20px;
+}
