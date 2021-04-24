@@ -5,7 +5,9 @@
   justify-content: space-between;
   padding: 0 30px;
   border-bottom: 1px solid #000000;
-  background-color: #000b6e;
+  /* background-color: #000b6e; */
+  background-color: #000000;
+  /* background-color: #029eb9; */
   height: 100px;
 }
 .header-title {
@@ -38,16 +40,17 @@
 
 .login-button {
   color: #ffffff;
-  background-color: #000b6e;
+  /* background-color: #000b6e; */
+  background-color: #000000;
   text-decoration: none;
   user-select: none;
   padding: 12px 30px;
   outline: none;
-  border: 2px solid;
+  border: 2px solid #ffffff;
   border-radius: 1px;
   transition: 0.2s;
 }
 .login-button:hover {
-  background-color: #010950;
+  background-color: #000000;
   transform: scale(1.1);
 }

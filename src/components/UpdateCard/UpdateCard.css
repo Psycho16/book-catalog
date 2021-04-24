@@ -1,19 +1,21 @@
-/* AddNewCard */
-.book-form {
-  /* margin: 5px 5px 10px 10px; */
+.update-form {
   margin: auto;
   margin-top: 5%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 400px;
+  width: 320px;
   height: 500px;
   border: 1px solid #000000;
   padding: 5px;
 }
+.prev {
+  font-size: 15px;
+  margin: 0 auto;
+}
 .book-form-input {
-  font-size: 30px;
-  height: 50px;
+  font-size: 20px;
+  height: 25px;
   border: none;
 }
 .book-form-input:focus {
@@ -24,4 +26,9 @@
   height: 50px;
   font-size: 20px;
   background-color: #000000;
+}
+.update-form-isbn {
+  font-size: 25px;
+  height: 50px;
+  border: none;
 }

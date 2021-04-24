@@ -15,7 +15,9 @@ function Header() {
           Добавить книгу
         </Link>
       </nav>
-      <button className="login-button">Войти</button>
+      <Link to="/AuthPAge">
+        <button className="login-button">Авторизация</button>
+      </Link>
     </header>
   );
 }

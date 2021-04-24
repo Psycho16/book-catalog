@@ -36,19 +36,23 @@ function AddNewCard() {
       <input
         ref={title}
         className="book-form-input input-book_title"
-        placeholder="Название книги"
+        placeholder="Введите название книги"
       ></input>
       <input
         ref={author}
         className="book-form-input input-book_author"
-        placeholder="Автор книги"
+        placeholder="Введите автора книги"
       ></input>
       <input
         ref={date}
         className="book-form-input input-book_year"
-        placeholder="Дата издания"
+        placeholder="Введите дату издания"
       ></input>
-      <input ref={iSBN} className="book-form-input input-book_ISBN" placeholder="ISBN"></input>
+      <input
+        ref={iSBN}
+        className="book-form-input input-book_ISBN"
+        placeholder="Введите ISBN"
+      ></input>
       <button className="book-form_button" onClick={AddNewCardData}>
         Добавить книгу
       </button>
