@@ -9,25 +9,34 @@ class BookCard extends React.Component {
   state = {
     Books: null,
   };
+  // componentDidMount() {
+  //   db.collection('Books')
+  //     .get()
+  //     .then((snapshot) => {
+  //       const Books = [];
+  //       snapshot.forEach((doc) => {
+  //         const data = doc.data();
+  //         Books.push(data);
+  //       });
+  //       this.setState({ Books: Books });
+  //     })
+  //     .catch((error) => console.log(error));
+  // }
   componentDidMount() {
-    db.collection('Books')
-      .get()
-      .then((snapshot) => {
-        const Books = [];
-        snapshot.forEach((doc) => {
-          const data = doc.data();
-          Books.push(data);
-        });
-        this.setState({ Books: Books });
-      })
-      .catch((error) => console.log(error));
+    db.collection('Books').onSnapshot((snapshot) => {
+      const Books = [];
+      snapshot.forEach((doc) => {
+        const data = doc.data();
+        Books.push(data);
+      });
+      this.setState({ Books: Books });
+    });
   }
   DeleteCardData(iSBN) {
     console.log(iSBN);
     db.collection('Books').doc(iSBN).delete();
-    alert('Книга успешно удалена');
+    // alert('Книга успешно удалена');
   }
-  componentWillUnmount() {}
 
   render() {
     return (
