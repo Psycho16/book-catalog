@@ -1,6 +1,7 @@
 import './UpdateCard.css';
 import React, { useState, useRef } from 'react';
 import ReactDOM from 'react-dom';
+import { Redirect } from 'react-router-dom';
 import { db, auth } from '../firebase';
 
 function UpdateCard(props) {
@@ -8,12 +9,14 @@ function UpdateCard(props) {
   const authorRef = useRef(null);
   const dateRef = useRef(null);
   const iSBNRef = useRef(null);
+  if (!props.location.aboutProps) return <Redirect to="/" />;
   const { title, author, date, isbn } = props.location.aboutProps;
-  console.log(title);
-  console.log(author);
-  console.log(date);
-  console.log(isbn);
 
+  const validateEmpty = (inp) => {
+    if (inp === null) {
+      return <p className="error-message">Пустое поле</p>;
+    }
+  };
   const UpdateCardData = () => {
     if (typeof isbn == 'string') alert('string');
     // console.log(typeof isbn = number);

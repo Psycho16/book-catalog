@@ -68,24 +68,6 @@ class BookCard extends React.Component {
                 <button className="update-button">Обновить</button>
               </Link>
             </div>
-            {/* <button className="delete-button" onClick={() => this.DeleteCardData(Books.ISBN)}>
-              Удалить
-            </button>
-            <Link
-              // to="/UpdateCard"
-              to={{
-                pathname: '/UpdateCard',
-                aboutProps: {
-                  title: Books.title,
-                  author: Books.author,
-                  date: Books.date,
-                  isbn: Books.ISBN,
-                },
-              }}
-              className="update-button"
-            >
-              Обновить
-            </Link> */}
           </div>
         );
       })
