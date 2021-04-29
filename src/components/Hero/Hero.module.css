@@ -2,7 +2,7 @@
   margin: auto;
   margin-top: 40vh;
 }
-.button-log {
+.button_log {
   border: none;
   /* border: 2px solid #ffffff; */
   text-decoration: none;
@@ -18,7 +18,7 @@
   font-family: sans-serif;
   transition: 0.5s;
 }
-.button-log:hover {
+.button_log:hover {
   background-color: #000000;
   transform: scale(1.1);
 }

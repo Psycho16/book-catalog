@@ -1,5 +1,5 @@
 /* AddNewCard */
-.book-form {
+.book_form {
   /* margin: 5px 5px 10px 10px; */
   margin: auto;
   margin-top: 5%;
@@ -11,15 +11,15 @@
   border: 1px solid #000000;
   padding: 5px;
 }
-.book-form-input {
+.book_form_input {
   font-size: 30px;
   height: 50px;
   border: none;
 }
-.book-form-input:focus {
+.book_form_input:focus {
   outline: none;
 }
-.book-form_button {
+.book_form_button {
   color: #ffffff;
   height: 50px;
   font-size: 20px;

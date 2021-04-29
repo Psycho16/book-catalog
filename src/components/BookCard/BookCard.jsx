@@ -1,11 +1,12 @@
-import './BookCard.css';
+import styles from './BookCard.module.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { db, auth } from '../firebase';
 import { HashRouter as Router, Route, Link, Switch } from 'react-router-dom';
-import UpdateCard from '../UpdateCard/UpdateCard';
+// import UpdateCard from '../UpdateCard/UpdateCard';
 
 class BookCard extends React.Component {
+  // _isMounted = false;
   state = {
     Books: null,
   };
@@ -23,6 +24,7 @@ class BookCard extends React.Component {
   //     .catch((error) => console.log(error));
   // }
   componentDidMount() {
+    // this._isMounted = true;
     db.collection('Books').onSnapshot((snapshot) => {
       const Books = [];
       snapshot.forEach((doc) => {
@@ -33,9 +35,7 @@ class BookCard extends React.Component {
     });
   }
   DeleteCardData(iSBN) {
-    console.log(iSBN);
     db.collection('Books').doc(iSBN).delete();
-    // alert('Книга успешно удалена');
   }
 
   render() {
@@ -43,13 +43,16 @@ class BookCard extends React.Component {
       this.state.Books &&
       this.state.Books.map((Books) => {
         return (
-          <div className="book-card" key={Books.ISBN}>
-            <h2 className="book-title">{Books.title}</h2>
-            <h2 className="book-author">Автор: {Books.author}</h2>
-            <h3 className="book-year">Дата выхода: {Books.date}</h3>
-            <h3 className="book-ISBN">ISBN: {Books.ISBN}</h3>
-            <div className="buttons">
-              <button className="delete-button" onClick={() => this.DeleteCardData(Books.ISBN)}>
+          <div className={styles.book_card} key={Books.ISBN}>
+            <h2 className={styles.book_title}>{Books.title}</h2>
+            <h2 className={styles.book_author}>Автор: {Books.author}</h2>
+            <h3 className={styles.book_year}>Дата выхода: {Books.date}</h3>
+            <h3 className={styles.book_ISBN}>ISBN: {Books.ISBN}</h3>
+            <div className={styles.buttons}>
+              <button
+                className={styles.delete_button}
+                onClick={() => this.DeleteCardData(Books.ISBN)}
+              >
                 Удалить
               </button>
               <Link
@@ -65,7 +68,7 @@ class BookCard extends React.Component {
                 }}
                 // className="update-button"
               >
-                <button className="update-button">Обновить</button>
+                <button className={styles.update_button}>Обновить</button>
               </Link>
             </div>
           </div>

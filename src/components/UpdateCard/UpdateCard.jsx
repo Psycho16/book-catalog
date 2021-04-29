@@ -1,8 +1,7 @@
-import './UpdateCard.css';
-import React, { useState, useRef } from 'react';
-import ReactDOM from 'react-dom';
+import styles from './UpdateCard.module.css';
+import React, { useRef } from 'react';
 import { Redirect } from 'react-router-dom';
-import { db, auth } from '../firebase';
+import { db } from '../firebase';
 
 function UpdateCard(props) {
   const titleRef = useRef(null);
@@ -18,13 +17,10 @@ function UpdateCard(props) {
     }
   };
   const UpdateCardData = () => {
-    if (typeof isbn == 'string') alert('string');
-    // console.log(typeof isbn = number);
     db.collection('Books').doc(isbn).update({
       title: titleRef.current.value,
       author: authorRef.current.value,
       date: dateRef.current.value,
-      //   title: 'успешно',
       ISBN: isbn,
     });
     titleRef.current.value = '';
@@ -34,30 +30,29 @@ function UpdateCard(props) {
     alert('Книга успешно изменена');
   };
   return (
-    <div className="update-form">
-      <p className="prev">Старое название: {title}</p>
+    <div className={styles.update_form}>
+      <p className={styles.prev}>Старое название: {title}</p>
       <input
         ref={titleRef}
-        className="book-form-input input-book_title"
+        className={styles.book_form_input}
         placeholder="Новое название книги"
       ></input>
-      <p className="prev">Старый автор: {author}</p>
+      <p className={styles.prev}>Старый автор: {author}</p>
       <input
         ref={authorRef}
-        className="book-form-input input-book_author"
+        className={styles.book_form_input}
         placeholder="Новый автор книги"
       ></input>
-      <p className="prev">Старая дата: {date}</p>
+      <p className={styles.prev}>Старая дата: {date}</p>
       <input
         ref={dateRef}
-        className="book-form-input input-book_year"
+        className={styles.book_form_input}
         placeholder="Новая дата издания"
       ></input>
-      {/* <p>Было {isbn}</p> */}
-      <p ref={iSBNRef} className="update-form-isbn">
+      <p ref={iSBNRef} className={styles.update_form_isbn}>
         ISBN Книги: {isbn}
       </p>
-      <button className="book-form_button" onClick={UpdateCardData}>
+      <button className={styles.book_form_button} onClick={UpdateCardData}>
         Изменить книгу
       </button>
     </div>

@@ -1,11 +1,11 @@
 import React from 'react';
-import './Hero.css';
+import styles from './Hero.module.css';
 const Hero = (props) => {
   return (
-    <section className="hero">
+    <section className={styles.hero}>
       <nav>
-        <h2>Вы авторизованы</h2>
-        <button onClick={props.handleLogOut} className="button-log">
+        <h2>Вы авторизованы</h2>y
+        <button onClick={props.handleLogOut} className={styles.button_log}>
           Выйти
         </button>
       </nav>

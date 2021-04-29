@@ -1,6 +1,7 @@
-import './AddNewCard.css';
+import styles from './AddNewCard.module.css';
 import React, { useState, useRef } from 'react';
 import ReactDOM from 'react-dom';
+import { Redirect } from 'react-router-dom';
 import { db, auth } from '../firebase';
 
 function AddNewCard() {
@@ -32,28 +33,28 @@ function AddNewCard() {
   };
 
   return (
-    <div className="book-form">
+    <div className={styles.book_form}>
       <input
         ref={title}
-        className="book-form-input input-book_title"
+        className={styles.book_form_input}
         placeholder="Введите название книги"
       ></input>
       <input
         ref={author}
-        className="book-form-input input-book_author"
+        className={styles.book_form_input}
         placeholder="Введите автора книги"
       ></input>
       <input
         ref={date}
-        className="book-form-input input-book_year"
+        className={styles.book_form_input}
         placeholder="Введите дату издания"
       ></input>
       <input
         ref={iSBN}
-        className="book-form-input input-book_ISBN"
-        placeholder="Введите ISBN"
+        className={styles.book_form_input}
+        placeholder="Введите ISBN(Не пустой)"
       ></input>
-      <button className="book-form_button" onClick={AddNewCardData}>
+      <button className={styles.book_form_button} onClick={AddNewCardData}>
         Добавить книгу
       </button>
     </div>

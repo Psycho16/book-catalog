@@ -10,18 +10,18 @@
   /* background-color: #029eb9; */
   height: 100px;
 }
-.header-title {
+.header_title {
   color: #ffffff;
   text-align: center;
 }
-.header-nav {
+.header_nav {
   width: 25%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.nav-button {
+.nav_button {
   color: #ffffff;
   font-weight: bold;
   /* background-color: #fcfcfc; */
@@ -32,13 +32,13 @@
   border-radius: 1px;
   transition: 0.2s;
 }
-.nav-button:hover {
+.nav_button:hover {
   /* color: #12003d; */
   /* transition: all 1s; */
   transform: scale(1.1);
 }
 
-.login-button {
+.login_button {
   color: #ffffff;
   /* background-color: #000b6e; */
   background-color: #000000;
@@ -50,7 +50,7 @@
   border-radius: 1px;
   transition: 0.2s;
 }
-.login-button:hover {
+.login_button:hover {
   background-color: #000000;
   transform: scale(1.1);
 }

@@ -1,4 +1,4 @@
-.update-form {
+.update_form {
   margin: auto;
   margin-top: 5%;
   display: flex;
@@ -13,21 +13,21 @@
   font-size: 15px;
   margin: 0 auto;
 }
-.book-form-input {
+.book_form_input {
   font-size: 20px;
   height: 25px;
   border: none;
 }
-.book-form-input:focus {
+.book_form_input:focus {
   outline: none;
 }
-.book-form_button {
+.book_form_button {
   color: #ffffff;
   height: 50px;
   font-size: 20px;
   background-color: #000000;
 }
-.update-form-isbn {
+.update_form-isbn {
   font-size: 25px;
   height: 50px;
   border: none;

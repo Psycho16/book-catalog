@@ -1,5 +1,5 @@
 import React from 'react';
-import './LogIn.css';
+import styles from './LogIn.module.css';
 
 const LogIn = (props) => {
   const {
@@ -16,46 +16,54 @@ const LogIn = (props) => {
   } = props;
 
   return (
-    <section className="login">
-      <div className="login-wrapper">
+    <section className={styles.login}>
+      <div className={styles.login_wrapper}>
         <input
           placeholder="Логин"
           type="text"
           autoFocus
           required
           value={email}
+          className={styles.input}
           onChange={(event) => setEmail(event.target.value)}
         />
-        <p className="error-message">{emailError}</p>
+        <p className={styles.error_message}>{emailError}</p>
         <input
           placeholder="Пароль"
           type="password"
           required
           value={password}
+          className={styles.input}
           onChange={(event) => setPassword(event.target.value)}
         />
-        <p className="error-message">{passwordError}</p>
-        <div className="button-container">
+        <p className={styles.error_message}>{passwordError}</p>
+        <div className={styles.button_container}>
           {hasAccount ? (
             <>
-              <button onClick={handleLogin} className="button-log">
+              <button onClick={handleLogin} className={styles.button_log}>
                 Войти
               </button>
-              <p className="button-container__text">
+              <p className={styles.button_container__text}>
                 Нет аккаунта?
-                <span className="button-container__span" onClick={() => setHasAccount(!hasAccount)}>
+                <span
+                  className={styles.button_container__span}
+                  onClick={() => setHasAccount(!hasAccount)}
+                >
                   Зарегистрируйтесь
                 </span>
               </p>
             </>
           ) : (
             <>
-              <button onClick={handleSignUp} className="button-log">
+              <button onClick={handleSignUp} className={styles.button_log}>
                 Зарегистрироваться
               </button>
-              <p className="button-container__text">
+              <p className={styles.button_container__text}>
                 Есть аккаунт?{' '}
-                <span className="button-container__span" onClick={() => setHasAccount(!hasAccount)}>
+                <span
+                  className={styles.button_container__span}
+                  onClick={() => setHasAccount(!hasAccount)}
+                >
                   Войти
                 </span>
               </p>

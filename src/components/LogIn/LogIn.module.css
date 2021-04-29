@@ -1,4 +1,4 @@
-.button-log {
+.button_log {
   /* border: none; */
   border: 2px solid #ffffff;
   text-decoration: none;
@@ -13,9 +13,8 @@
   cursor: pointer;
   font-family: sans-serif;
 }
-.button-log:hover {
+.button_log:hover {
   background-color: #000000;
-  /* transform: scale(1.1); */
 }
 .login {
   width: 100%;
@@ -27,24 +26,29 @@
   align-items: center;
   justify-content: space-around; */
 }
-.login-wrapper {
+.login_wrapper {
   margin: auto;
-  margin-top: 40vh;
-  width: 300px;
+  margin-top: 10%;
   display: flex;
   flex-direction: column;
   /* align-items: center; */
-  justify-content: space-around;
+  width: 400px;
+  height: 315px;
+  border: 1px solid #000000;
+  padding: 5px;
+  padding-top: 2%;
+  /* justify-content: space-around; */
 }
-input {
+.input {
   font-size: 20px;
   height: 25px;
-  border: solid 1px #1100f8;
+  border: none;
+  margin-bottom: 15px;
 }
-input:focus {
+.input:focus {
   outline: none;
 }
-.button-container__span {
+.button_container__span {
   color: #0601ff;
   font-weight: 500;
   letter-spacing: 0.5px;
@@ -52,10 +56,14 @@ input:focus {
   cursor: pointer;
   /* transition: all 400ms ease-in-out; */
 }
-.button-container__span:hover {
+.button_container__span:hover {
   color: #000000;
 }
-.error-message {
-  font-size: 20px;
+.error_message {
+  margin: 0;
+  font-size: 15px;
   color: #ac0000;
+  margin-bottom: 56px;
+  margin-left: 0;
+  width: max-content;
 }
