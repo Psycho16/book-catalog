@@ -3,28 +3,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { db, auth } from '../firebase';
 import { HashRouter as Router, Route, Link, Switch } from 'react-router-dom';
-// import UpdateCard from '../UpdateCard/UpdateCard';
 
 class BookCard extends React.Component {
-  // _isMounted = false;
   state = {
     Books: null,
   };
-  // componentDidMount() {
-  //   db.collection('Books')
-  //     .get()
-  //     .then((snapshot) => {
-  //       const Books = [];
-  //       snapshot.forEach((doc) => {
-  //         const data = doc.data();
-  //         Books.push(data);
-  //       });
-  //       this.setState({ Books: Books });
-  //     })
-  //     .catch((error) => console.log(error));
-  // }
   componentDidMount() {
-    // this._isMounted = true;
     db.collection('Books').onSnapshot((snapshot) => {
       const Books = [];
       snapshot.forEach((doc) => {
@@ -56,7 +40,6 @@ class BookCard extends React.Component {
                 Удалить
               </button>
               <Link
-                // to="/UpdateCard"
                 to={{
                   pathname: '/UpdateCard',
                   aboutProps: {
