@@ -9,15 +9,8 @@ function AddNewCard() {
   const author = useRef(null);
   const date = useRef(null);
   const iSBN = useRef(null);
-
-  // const AddNewCardData = () => {
-  //   db.collection('Books').add({
-  //     title: title.current.value,
-  //     author: author.current.value,
-  //     date: date.current.value,
-  //     ISBN: iSBN.current.value,
-  //   });
-  // };
+  
+  
   const AddNewCardData = () => {
     db.collection('Books').doc(iSBN.current.value).set({
       title: title.current.value,
