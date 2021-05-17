@@ -11,11 +11,6 @@ function UpdateCard(props) {
   if (!props.location.aboutProps) return <Redirect to="/" />;
   const { title, author, date, isbn } = props.location.aboutProps;
 
-  const validateEmpty = (inp) => {
-    if (inp === null) {
-      return <p className="error-message">Пустое поле</p>;
-    }
-  };
   const UpdateCardData = () => {
     db.collection('Books').doc(isbn).update({
       title: titleRef.current.value,
